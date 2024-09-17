@@ -44,11 +44,10 @@
      */
     function render() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        const num = 5;
+        const num = 6;
         let points = [];
-        for (let i = 0; i < num * 2; i += 2) {
-            points.push(generateRandomInt(canvas.width * 0.8));
-            points.push(generateRandomInt(canvas.height * 0.8));
+        for (let i = 0; i < num; ++i) {
+            points.push(generateRandomInt(canvas.width * 0.8), generateRandomInt(canvas.height * 0.8));
         }
         let color = getRandomHexColor();
         drawPolygon(points, color);
